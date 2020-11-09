@@ -8,14 +8,14 @@ public class User implements java.io.Serializable{
 	private String password;
 	private String cardNumber;
 	private boolean isAdmin;
-
+	
 	public User(String userName, String firstName, String lastName, String password, String cardNumber, boolean isAdmin) {
-		this.userName = userName;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.password = password;
-		this.cardNumber = cardNumber;
-		this.isAdmin = isAdmin;
+		this.setUserName(userName);
+		this.setFirstName(firstName);
+		this.setLastName(lastName);
+		this.setPassword(password);
+		this.setCardNumber(cardNumber);
+		this.setAdmin(isAdmin);
 	}
 
 	public String getCardNumber() {
@@ -24,7 +24,7 @@ public class User implements java.io.Serializable{
 
 
 	public void setCardNumber(String cardNumber) {
-		this.cardNumber = cardNumber; 
+		this.cardNumber = cardNumber;
 	}
 
 
@@ -76,4 +76,10 @@ public class User implements java.io.Serializable{
 	public void setAdmin(boolean isAdmin) {
 		this.isAdmin = isAdmin;
 	}
+
+
+	public User() {
+
+	}
+
 }

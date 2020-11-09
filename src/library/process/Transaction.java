@@ -1,11 +1,11 @@
+  
 package library.process;
-
-import library.entity.Book;
-import library.entity.User;
 
 import java.util.HashMap;
 import java.util.Random;
 import java.util.ArrayList;
+import library.entity.Book;
+import library.entity.User;
 
 public class Transaction {
 
@@ -15,7 +15,6 @@ public class Transaction {
 	public static HashMap<String, User> currentUsers;
 	
 	private Transaction() {
-
 	}
 	
 	public static HashMap<String, ArrayList> getCurrentBookings() {
@@ -48,8 +47,7 @@ public class Transaction {
 		HashMap<String, Book> booksInventory = LibraryData.getBooks();
 		
 		Book book = null;
-		for(int i=0; i<cart.size(); i++)
-		{
+		for(int i=0; i<cart.size(); i++) {
 			String bookId = (String)cart.get(i);
 			
 			book = booksInventory.get(bookId);
@@ -61,11 +59,12 @@ public class Transaction {
 		}
 		LibraryData.setBooks(booksInventory);
 		ArrayList bookingsTillDate = currentBookings.get(userNameParam);
-		if(bookingsTillDate==null)
-		{
+		if(bookingsTillDate==null) {
 			bookingsTillDate = new ArrayList();
 		}
 		bookingsTillDate.addAll(cart);
+		currentBookings.put(userNameParam, bookingsTillDate);
+		System.out.println("Bookings Till Date: "+bookingsTillDate.size());
 	}
 	
 	public static void returnBook(String userNameParam, String bookIdParam) {
@@ -88,8 +87,7 @@ public class Transaction {
 		java.util.Set<String> keys = books.keySet();
 		java.util.Iterator keyIterator = keys.iterator();
 		
-		while(keyIterator.hasNext())
-		{
+		while(keyIterator.hasNext()) {
 			String key = (String)keyIterator.next();
 			book = books.get(key);
 			
@@ -108,15 +106,14 @@ public class Transaction {
 		boolean result = false;
 		Random r = new Random( System.currentTimeMillis() );
 	    int cardNumber = 10000 + r.nextInt(20000);
-		
+
 		User member = new User(userName, firstName, lastName, password, cardNumber+"", false);
-		
+
 		currentUsers = LibraryData.getUsers();
 		currentUsers.put(member.getUserName(), member);
-		
+
 		LibraryData.setUsers(currentUsers);
-		
+
 		return result;
 	}
-	
 }

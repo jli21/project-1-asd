@@ -1,21 +1,24 @@
 package library.process;
 import java.util.HashMap;
-
+import java.util.Random;
+import java.util.ArrayList;
 import library.entity.*;
 
 public class LibraryData {
 	
 	private static HashMap<String, User> users = new HashMap();
 	private static HashMap<String, Book> books = new HashMap();
+	private static Random r = new Random( System.currentTimeMillis() );
+	private static Random r1 = new Random( System.currentTimeMillis() );
 	
 	public LibraryData() {
-		// TODO Auto-generated constructor stub
+
 	}
 	
 	public static void initiatlizeData() {
-		users.put("sidlal", new User("slal", "Siddharth", "Lal", "password", "CRD01", false));
-		users.put("jsnli", new User("jli", "Jason", "Li", "password", "CRD02", false));
-		users.put("admin", new User("admin", "sys", "Administrator", "welcome234", "ADMCARD", true));
+		users.put("slal", new User("slal", "Siddharth", "Lal", "password", "CRD01", false));
+		users.put("jli", new User("jli", "Jason", "Li", "password", "CRD02", false));
+		users.put("admin", new User("admin", "Administrator", "", "sys", "ADMCARD", true));
 
 		books.put("LIB003", new Book("LIB003", "Harry Potter and the Chamber of Secrets", "J.K. Rowling", "ISBN003", "Fantasy", "MacMillian"));
 		books.put("LIB004", new Book("LIB004", "Harry Potter and the Prisoner of Azkhaban", "J.K. Rowling", "ISBN004", "Fantasy", "MacMillian"));
@@ -27,7 +30,6 @@ public class LibraryData {
 		books.put("LIB010", new Book("LIB010", "Alice's Adventure in Wonderland", "Lewis Caroll", "ISBN010", "Fantasy", "MacMillian"));
 		books.put("LIB011", new Book("LIB011", "The Lion, the Witch, and the Wardrobe", "C.S. Lewis", "ISBN011", "Fantasy", "MacMillian"));
 		books.put("LIB012", new Book("LIB012", "Twenty Thousand Leagues Under the Sea", "Jules Vernes", "ISBN012", "Fantasy", "MacMillian"));
-	
 	}
 
 	public static HashMap<String, User> getUsers() {

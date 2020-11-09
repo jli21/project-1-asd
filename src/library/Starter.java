@@ -1,3 +1,4 @@
+  
 package library;
 import library.process.*;
 import library.view.*;
@@ -9,7 +10,6 @@ public class Starter {
 	public static String bookId = "LIB001";
 	
 	public Starter() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	public static void main(String[] args) {
