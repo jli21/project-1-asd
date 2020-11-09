@@ -24,9 +24,9 @@ public class LibraryData {
 		books.put("LIB007", new Book("LIB007", "The Two Towers", "J.R.R. Tolkien", "ISBN007", "Fantasy", "MacMillian"));
 		books.put("LIB008", new Book("LIB008", "The Return of the King", "J.R.R. Tolkien", "ISBN008", "Fantasy", "MacMillian"));
 		books.put("LIB009", new Book("LIB09", "And Then There Were None", "Agatha Christie", "ISBN009", "Fantasy", "MacMillian"));
-		books.put("LIB009", new Book("LIB010", "Alice's Adventure in Wonderland", "Lewis Caroll", "ISBN010", "Fantasy", "MacMillian"));
-		books.put("LIB009", new Book("LIB011", "The Lion, the Witch, and the Wardrobe", "C.S. Lewis", "ISBN011", "Fantasy", "MacMillian"));
-		books.put("LIB009", new Book("LIB012", "Twenty Thousand Leagues Under the Sea", "Jules Vernes", "ISBN012", "Fantasy", "MacMillian"));
+		books.put("LIB010", new Book("LIB010", "Alice's Adventure in Wonderland", "Lewis Caroll", "ISBN010", "Fantasy", "MacMillian"));
+		books.put("LIB011", new Book("LIB011", "The Lion, the Witch, and the Wardrobe", "C.S. Lewis", "ISBN011", "Fantasy", "MacMillian"));
+		books.put("LIB012", new Book("LIB012", "Twenty Thousand Leagues Under the Sea", "Jules Vernes", "ISBN012", "Fantasy", "MacMillian"));
 	
 	}
 
